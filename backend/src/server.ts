@@ -1,9 +1,12 @@
+import "reflect-metadata";
+import * as express from "express";
+import * as bodyParser from "body-parser";
+import routes from "./routes";
+
 const express = require("express");
 
 const app = express();
 
-app.listen(3000, () => console.log("Servidor rodando local na porta 3000"));
-
-app.get("/", function (req, res) {
-  res.send("<h1>Servidor rodando</h1>");
-});
+app.use(bodyParser.json());
+app.use(routes);
+app.listen(3333, () => console.log("Servidor rodando local na porta 3333"));
