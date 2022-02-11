@@ -1,8 +1,15 @@
 import React from "react";
-import Users from "./pages/Users";
+import { BrowserRouter as Router } from "react-router-dom";
+import Routings from "./routes";
 
 function App() {
-  return <Users />;
+  return (
+    <>
+      <Router>
+        <Routings />
+      </Router>
+    </>
+  );
 }
 
 export default App;
