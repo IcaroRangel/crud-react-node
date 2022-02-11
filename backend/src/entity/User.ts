@@ -15,7 +15,7 @@ export class User {
   name: string;
 
   @Column()
-  cpf: number;
+  cpf: string;
 
   @Column()
   email: string;
