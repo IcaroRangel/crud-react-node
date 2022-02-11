@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./components/Header";
+import Users from "./pages/Users";
 
 function App() {
-  return <Header />;
+  return <Users />;
 }
 
 export default App;
