@@ -1,13 +1,15 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import CreatePatient from "../pages/CreatePatient";
 import Home from "../pages/Home";
-import Users from "../pages/Users";
+import Patients from "../pages/Patients";
 
 const Routings = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/users" element={<Users />} />
+      <Route path="/patients" element={<Patients />} />
+      <Route path="/createPatient" element={<CreatePatient />} />
     </Routes>
   );
 };

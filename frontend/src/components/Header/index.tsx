@@ -1,13 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Container, ContainerNav } from "./styles";
+//@ts-expect-error
+import { ReactComponent as Hospital } from "../../assets/hospital.svg";
 
 const Header = () => {
   return (
     <Container>
       <ContainerNav>
+        <Link to="/">
+          <Hospital />
+        </Link>
         <Link to="/">Início</Link>
-        <Link to="/users">Dados dos usuários</Link>
+        <Link to="/patients">Dados dos pacientes</Link>
+        <Link to="/createPatient">Adicionar paciente</Link>
       </ContainerNav>
     </Container>
   );
