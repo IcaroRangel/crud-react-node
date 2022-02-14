@@ -1,13 +1,14 @@
 import "reflect-metadata";
-import { createConnection } from "typeorm";
-import * as express from "express";
-import * as bodyParser from "body-parser";
+import { createConnections } from "typeorm";
+import express from "express";
 import routes from "./routes";
+import cors from "cors";
 
 const app = express();
-createConnection();
+app.use(cors());
+createConnections();
 
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(routes);
 
-app.listen(3333, () => console.log("Servidor rodando local na porta 3333"));
+app.listen(3000, () => console.log("Servidor rodando local na porta 3000"));
