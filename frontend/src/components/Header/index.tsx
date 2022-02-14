@@ -1,8 +1,16 @@
 import React from "react";
-import { Container } from "./styles";
+import { Link } from "react-router-dom";
+import { Container, ContainerNav } from "./styles";
 
 const Header = () => {
-  return <Container>Header</Container>;
+  return (
+    <Container>
+      <ContainerNav>
+        <Link to="/">Início</Link>
+        <Link to="/users">Dados dos usuários</Link>
+      </ContainerNav>
+    </Container>
+  );
 };
 
 export default Header;

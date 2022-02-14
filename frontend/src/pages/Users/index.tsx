@@ -24,16 +24,7 @@ const Users = () => {
     loadUsers();
   }, [loadUsers]);
 
-  return (
-    <Container>
-      <Header />
-      {users.map((user) => (
-        <div key={user.id}>
-          <h4>{user.name}</h4>
-        </div>
-      ))}
-    </Container>
-  );
+  return <Container>usuarios</Container>;
 };
 
 export default Users;
