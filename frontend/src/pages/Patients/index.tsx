@@ -44,10 +44,16 @@ const Patients = () => {
             <span className="column-20">{patient.email}</span>
             <span className="column-20">{patient.address}</span>
             <span className="column-10">
-              <Link to="/updatePatient" style={{ color: "#d0fc08" }}>
+              <Link
+                to={`/updatePatient/${patient.id}`}
+                style={{ color: "#d0fc08" }}
+              >
                 <FiEdit />
               </Link>
-              <Link to="" style={{ color: "#5656ff" }}>
+              <Link
+                to={`/deletePatient/${patient.id}`}
+                style={{ color: "#5656ff" }}
+              >
                 <FiTrash2 />
               </Link>
             </span>
