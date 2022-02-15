@@ -2,6 +2,7 @@ import React from "react";
 import api from "../../services/api";
 import { Container, ContainerUl } from "./styles";
 import { FiEdit, FiTrash2 } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 type PatientsProps = {
   id: number;
@@ -43,8 +44,12 @@ const Patients = () => {
             <span className="column-20">{patient.email}</span>
             <span className="column-20">{patient.address}</span>
             <span className="column-10">
-              <FiEdit />
-              <FiTrash2 />
+              <Link to="/updatePatient" style={{ color: "#d0fc08" }}>
+                <FiEdit />
+              </Link>
+              <Link to="" style={{ color: "#5656ff" }}>
+                <FiTrash2 />
+              </Link>
             </span>
           </li>
         ))}

@@ -1,7 +1,8 @@
 import React from "react";
+import { Container } from "./styles";
 
 const UpdatePatient = () => {
-  return <div>UpdatePatient</div>;
+  return <Container>UpdatePatient</Container>;
 };
 
 export default UpdatePatient;

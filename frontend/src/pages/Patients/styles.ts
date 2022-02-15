@@ -30,4 +30,7 @@ export const ContainerUl = styled.ul`
     gap: 20px;
     height: 30px;
   }
+  a {
+    text-decoration: none;
+  }
 `;
