@@ -1,6 +1,7 @@
 import React from "react";
 import api from "../../services/api";
-import { Container } from "./styles";
+import { Container, ContainerUl } from "./styles";
+import { FiEdit, FiTrash2 } from "react-icons/fi";
 
 type PatientsProps = {
   id: number;
@@ -23,7 +24,33 @@ const Patients = () => {
     loadPatients();
   }, [loadPatients]);
 
-  return <Container>pacientes</Container>;
+  return (
+    <Container>
+      <div>
+        <span className="column-10">ID</span>
+        <span className="column-20">Nome</span>
+        <span className="column-20">CPF</span>
+        <span className="column-20">E-mail</span>
+        <span className="column-20">Endereço</span>
+        <span className="column-10">Ações</span>
+      </div>
+      <ContainerUl>
+        {patients.map((patient) => (
+          <li key={patient.id}>
+            <span className="column-10">{patient.id}</span>
+            <span className="column-20">{patient.name}</span>
+            <span className="column-20">{patient.cpf}</span>
+            <span className="column-20">{patient.email}</span>
+            <span className="column-20">{patient.address}</span>
+            <span className="column-10">
+              <FiEdit />
+              <FiTrash2 />
+            </span>
+          </li>
+        ))}
+      </ContainerUl>
+    </Container>
+  );
 };
 
 export default Patients;
