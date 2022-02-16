@@ -11,4 +11,4 @@ createConnections();
 app.use(express.json());
 app.use(routes);
 
-app.listen(3000, () => console.log("Servidor rodando local na porta 3000"));
+app.listen(3333, () => console.log("Servidor rodando local na porta 3333"));
