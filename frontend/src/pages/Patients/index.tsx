@@ -3,14 +3,7 @@ import api from "../../services/api";
 import { Container, ContainerUl } from "./styles";
 import { FiEdit, FiTrash2 } from "react-icons/fi";
 import { Link } from "react-router-dom";
-
-type PatientsProps = {
-  id: number;
-  name: string;
-  cpf: string;
-  email: string;
-  address: string;
-};
+import { PatientsProps } from "../../models/Patient";
 
 const Patients = () => {
   const [patients, setPatients] = React.useState<PatientsProps[]>([]);
