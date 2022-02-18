@@ -7,7 +7,7 @@ interface PatientProviderProps {
 
 interface PatientContextData {
   patients: PatientsProps[];
-  setPatients: (patients: any) => void;
+  setPatients: (patients: PatientsProps[]) => void;
 }
 
 const PatientsContext = createContext({} as PatientContextData);
