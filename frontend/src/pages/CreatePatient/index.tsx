@@ -49,8 +49,7 @@ const CreatePatient = () => {
           type="text"
           onKeyPress={onlyNumber}
           value={cpf}
-          minLength={11}
-          maxLength={11}
+          pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
           onChange={(e) => setCpf(e.target.value)}
         />
         <Input

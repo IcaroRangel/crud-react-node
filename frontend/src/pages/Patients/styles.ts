@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  margin: 100px 50px 0px 50px;
+  margin: 20px 50px 0px 50px;
   div {
     display: flex;
     flex-flow: row wrap;
