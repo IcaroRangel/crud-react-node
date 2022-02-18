@@ -1,29 +1,10 @@
-import React from "react";
-import { PatientsProps } from "../../models/Patient";
+import React, { FormEvent } from "react";
 import { Container } from "./styles";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
-import { useForm } from "react-hook-form";
 import Input from "../../components/Input";
 import api from "../../services/api";
-
-let schema = yup.object().shape({
-  name: yup.string().required("Nome é obrigátorio"),
-  cpf: yup
-    .string()
-    .required("CPF é obrigatório")
-    .length(11, "CPF deve ter 11 digítos"),
-  email: yup
-    .string()
-    .required("E-mail é obrigátorio")
-    .email("Envie um formato de email válido"),
-  address: yup.string().required("Endereço é obrigátorio"),
-});
+import Button from "../../components/Button";
 
 const CreatePatient = () => {
-  const { register, handleSubmit } = useForm<PatientsProps>({
-    resolver: yupResolver(schema),
-  });
   const [name, setName] = React.useState("");
   const [cpf, setCpf] = React.useState("");
   const [email, setEmail] = React.useState("");
@@ -41,52 +22,54 @@ const CreatePatient = () => {
   }, []);
 
   const addPatient = React.useCallback(
-    async (e) => {
+    async (e: FormEvent) => {
       e.preventDefault();
       const patient = { name, cpf, email, address };
       await api.post("/users", patient);
     },
-    [address, cpf, email, name]
+    [name, cpf, email, address]
   );
 
   return (
     <Container>
       <h1>Informe os dados do paciente</h1>
-      <form onSubmit={handleSubmit(addPatient)}>
+      <form onSubmit={addPatient}>
         <Input
+          name="name"
+          required
           label="Nome"
           type="text"
-          required
           value={name}
-          {...register("name")}
           onChange={(e) => setName(e.target.value)}
         />
         <Input
+          name="cpf"
           label="CPF"
-          type="text"
           required
-          value={cpf}
+          type="text"
           onKeyPress={onlyNumber}
-          {...register("cpf")}
+          value={cpf}
+          minLength={11}
+          maxLength={11}
           onChange={(e) => setCpf(e.target.value)}
         />
         <Input
-          label="E-mail"
-          type="text"
+          name="email"
           required
+          label="E-mail"
+          type="email"
           value={email}
-          {...register("email")}
           onChange={(e) => setEmail(e.target.value)}
         />
         <Input
+          name="address"
+          required
           label="Endereço"
           type="text"
-          required
           value={address}
-          {...register("address")}
           onChange={(e) => setAddress(e.target.value)}
         />
-        <button type="submit">das</button>
+        <Button type="submit">Enviar</Button>
       </form>
     </Container>
   );
