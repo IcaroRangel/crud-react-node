@@ -14,8 +14,6 @@ const Patients = () => {
     setPatients(response);
   }, [setPatients]);
 
-  console.log(patients);
-
   React.useEffect(() => {
     loadPatients();
   }, [loadPatients]);

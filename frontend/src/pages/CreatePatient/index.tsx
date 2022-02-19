@@ -5,12 +5,13 @@ import api from "../../services/api";
 import Button from "../../components/Button";
 
 import { useNavigate } from "react-router-dom";
+import { usePatientContext } from "../../context/PatientsContext";
 
 const CreatePatient = () => {
-  const [name, setName] = React.useState("");
-  const [cpf, setCpf] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [address, setAddress] = React.useState("");
+  const { name, setName } = usePatientContext();
+  const { cpf, setCpf } = usePatientContext();
+  const { email, setEmail } = usePatientContext();
+  const { address, setAddress } = usePatientContext();
   const navigate = useNavigate();
 
   const onlyNumber = React.useCallback((evt) => {
@@ -43,7 +44,6 @@ const CreatePatient = () => {
           required
           label="Nome"
           type="text"
-          value={name}
           onChange={(e) => setName(e.target.value)}
         />
         <Input
@@ -52,7 +52,6 @@ const CreatePatient = () => {
           required
           type="text"
           onKeyPress={onlyNumber}
-          value={cpf}
           pattern="\d{3}\d{3}\d{3}\d{2}"
           onChange={(e) => setCpf(e.target.value)}
         />
@@ -61,7 +60,6 @@ const CreatePatient = () => {
           required
           label="E-mail"
           type="email"
-          value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <Input
@@ -69,7 +67,6 @@ const CreatePatient = () => {
           required
           label="Endereço"
           type="text"
-          value={address}
           onChange={(e) => setAddress(e.target.value)}
         />
         <Button type="submit">Enviar</Button>
