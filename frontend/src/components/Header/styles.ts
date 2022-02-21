@@ -6,6 +6,7 @@ export const Container = styled.header`
   justify-content: flex-start;
   border-bottom: 1px solid #cccccc;
   font-weight: 600;
+  width: 85vw;
 `;
 
 export const ContainerNav = styled.nav`
