@@ -4,7 +4,6 @@ export const Container = styled.header`
   height: 60px;
   display: flex;
   justify-content: flex-start;
-  margin: 0px 80px 0px 80px;
   border-bottom: 1px solid #cccccc;
   font-weight: 600;
 `;

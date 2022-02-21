@@ -4,12 +4,9 @@ export const Container = styled.footer`
   display: flex;
   align-items: center;
   bottom: 0;
-  position: absolute;
-  width: 100%;
+  margin-top: 228px;
   height: 40px;
-  border: 1px solid #363636;
-  background: #d3d3d3;
-
+  border-top: 1px solid #cccccc;
   span {
     display: flex;
     justify-content: left;

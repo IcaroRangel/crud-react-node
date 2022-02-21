@@ -19,9 +19,7 @@ const Header = () => {
         <Link to="/patients">
           <div>Dados dos pacientes</div>
         </Link>
-        <Link to="/createPatient">
-          <div>Adicionar paciente</div>
-        </Link>
+        <Link to="/createPatient">Adicionar paciente</Link>
       </ContainerNav>
     </Container>
   );
