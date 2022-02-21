@@ -9,11 +9,19 @@ const Header = () => {
     <Container>
       <ContainerNav>
         <Link to="/">
-          <Hospital />
+          <div>
+            <Hospital />
+          </div>
         </Link>
-        <Link to="/">Início</Link>
-        <Link to="/patients">Dados dos pacientes</Link>
-        <Link to="/createPatient">Adicionar paciente</Link>
+        <Link to="/">
+          <div>Início</div>
+        </Link>
+        <Link to="/patients">
+          <div>Dados dos pacientes</div>
+        </Link>
+        <Link to="/createPatient">
+          <div>Adicionar paciente</div>
+        </Link>
       </ContainerNav>
     </Container>
   );
