@@ -26,6 +26,3 @@ export const Container = styled.div`
     font-size: 18px;
   }
 `;
-
-// border: 1px outset #ff4040;
-//box-shadow: 4px 0px 10px 4px #ff4040;

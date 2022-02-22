@@ -8,7 +8,7 @@ export const Container = styled.div`
   div {
     display: flex;
     flex-flow: row wrap;
-    background: #f2f2f2;
+    background: #fff;
     span {
       border: 1px solid #cccccc;
       height: 25px;
@@ -50,7 +50,7 @@ export const ContainerUl = styled.ul`
       }
     }
     &:nth-child(even) {
-      background: #f2f2f2;
+      background: #fff;
     }
     &:nth-child(odd) {
       background: #c7edff;

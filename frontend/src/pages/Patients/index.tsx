@@ -46,7 +46,7 @@ const Patients = () => {
                 </Link>
                 <Link
                   to={`/deletePatient/${patient.id}`}
-                  style={{ color: "#5656ff" }}
+                  style={{ color: "#ff2828" }}
                 >
                   <FiTrash2 />
                 </Link>
