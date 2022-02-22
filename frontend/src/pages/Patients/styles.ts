@@ -42,6 +42,8 @@ export const ContainerUl = styled.ul`
       border-top: 1px solid #cccccc;
     }
     &:last-child {
+      border-bottom-right-radius: 6px;
+      border-bottom-left-radius: 6px;
       span:last-child {
         border-bottom-right-radius: 6px;
       }
@@ -53,7 +55,7 @@ export const ContainerUl = styled.ul`
       background: #fff;
     }
     &:nth-child(odd) {
-      background: #c7edff;
+      background: #cccccc;
     }
   }
   span {
