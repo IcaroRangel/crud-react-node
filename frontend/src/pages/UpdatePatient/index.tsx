@@ -45,6 +45,7 @@ const UpdatePatient = () => {
 
   return (
     <Container>
+      <h1>Editar dados do paciente</h1>
       <form onSubmit={update}>
         <Input
           label="Nome"

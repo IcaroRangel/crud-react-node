@@ -39,7 +39,7 @@ const DeletePatient = () => {
 
   return (
     <Container>
-      <h1>Deletar Produto</h1>
+      <h1>Deletar Paciente</h1>
 
       <form onSubmit={(e) => removePatient(e, id)}>
         <Input disabled name="name" placeholder={name} />
