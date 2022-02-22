@@ -31,7 +31,7 @@ const Patients = () => {
       <ContainerUl>
         {patients &&
           patients.map((patient) => (
-            <li key={patient.id}>
+            <li>
               <span className="column-10">{patient.id}</span>
               <span className="column-20">{patient.name}</span>
               <span className="column-20">{patient.cpf}</span>
