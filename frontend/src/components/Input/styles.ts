@@ -5,7 +5,6 @@ export const Container = styled.input`
   width: 40%;
   height: 48px;
   font-weight: 100;
-  margin-left: 6px;
   background: #f2f2f2;
   border-radius: 8px;
   display: flex;
@@ -13,5 +12,5 @@ export const Container = styled.input`
   justify-content: center;
   padding: 20px;
   outline: 0;
-  margin: 15px 0px 15px 0px;
+  margin: 5px 0px 25px 0px;
 `;
