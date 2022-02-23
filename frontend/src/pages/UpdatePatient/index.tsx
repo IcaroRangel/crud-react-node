@@ -48,7 +48,7 @@ const UpdatePatient = () => {
       <h1>Editar dados do paciente</h1>
       <form onSubmit={update}>
         <Input
-          label="Nome"
+          placeholder="Nome"
           name="name"
           type="text"
           value={name}
@@ -56,7 +56,7 @@ const UpdatePatient = () => {
           onChange={(e) => setName(e.target.value)}
         />
         <Input
-          label="CPF"
+          placeholder="CPF"
           name="cpf"
           type="text"
           value={cpf}
@@ -66,7 +66,7 @@ const UpdatePatient = () => {
           onChange={(e) => setCpf(e.target.value)}
         />
         <Input
-          label="Email"
+          placeholder="Email"
           name="email"
           type="email"
           value={email}
@@ -74,7 +74,7 @@ const UpdatePatient = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
         <Input
-          label="Endereço"
+          placeholder="Endereço"
           name="address"
           type="text"
           value={address}
