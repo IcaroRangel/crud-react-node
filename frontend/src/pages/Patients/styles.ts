@@ -35,9 +35,12 @@ export const Container = styled.div`
 `;
 
 export const ContainerUl = styled.ul`
+  padding-left: 0px;
+
   li {
     display: flex;
     flex-flow: row wrap;
+
     &:first-child {
       border-top: 1px solid #cccccc;
     }

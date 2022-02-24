@@ -20,6 +20,8 @@ export const Container = styled.footer`
     }
     p {
       padding-top: 2px;
+      width: 200px;
+      height: 10px;
     }
   }
   div {

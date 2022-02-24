@@ -3,7 +3,36 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-flow: row wrap;
-  div.column-60 {
+  @media (max-width: 1023px) {
+    div {
+      margin: 0;
+    }
+    .phrase {
+      width: 100vw !important;
+      height: 488px !important;
+      h1 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+    .image {
+      display: none;
+    }
+  }
+  @media (max-width: 664px) {
+    .phrase {
+      height: 473px !important;
+      h1 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+  div.image {
     width: 60%;
     height: 488px;
     img {
@@ -11,7 +40,7 @@ export const Container = styled.div`
       height: 100%;
     }
   }
-  div.column-40 {
+  div.phrase {
     width: 40%;
   }
   h1 {
