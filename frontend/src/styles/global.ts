@@ -13,7 +13,14 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0px 100px 0px 100px;
+    overflow-x: hidden;
   }
+  @media (max-width: 768px){
+    body {
+      margin: 0;
+    }
+  }
+  
   
 `;
 

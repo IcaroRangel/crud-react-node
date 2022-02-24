@@ -8,7 +8,7 @@ export const Container = styled.div`
       margin: 0;
     }
     .phrase {
-      width: 100vw !important;
+      width: 75% !important;
       height: 488px !important;
       h1 {
         font-size: 20px;
