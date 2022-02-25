@@ -52,7 +52,6 @@ export const ContainerNav = styled.nav`
       align-items: flex-end;
       a {
         font-size: 12px;
-
         div {
           width: 160px;
           display: flex;
@@ -72,12 +71,13 @@ export const ContainerNav = styled.nav`
       display: block;
     }
   }
-  @media (max-width: 460px) {
+  @media (max-width: 572px) {
     li {
       a {
         font-size: 8px;
+        padding-left: 4px;
         div {
-          width: 10px;
+          width: 20px;
           font-size: 8px;
         }
       }

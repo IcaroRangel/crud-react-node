@@ -32,12 +32,22 @@ const Patients = () => {
         {patients &&
           patients.map((patient) => (
             <li>
-              <span className="column-10">{patient.id}</span>
-              <span className="column-20">{patient.name}</span>
-              <span className="column-20">{patient.cpf}</span>
-              <span className="column-20">{patient.email}</span>
-              <span className="column-20">{patient.address}</span>
-              <span className="column-10">
+              <span className="column-10" data-title="ID">
+                {patient.id}
+              </span>
+              <span className="column-20" data-title="Nome">
+                {patient.name}
+              </span>
+              <span className="column-20" data-title="CPF">
+                {patient.cpf}
+              </span>
+              <span className="column-20" data-title="E-mail">
+                {patient.email}
+              </span>
+              <span className="column-20" data-title="Endereço">
+                {patient.address}
+              </span>
+              <span className="column-10" data-Title="Ações">
                 <Link
                   to={`/updatePatient/${patient.id}`}
                   style={{ color: "#d0fc08" }}
