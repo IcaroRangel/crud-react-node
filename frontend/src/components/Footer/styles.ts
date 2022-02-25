@@ -9,9 +9,10 @@ export const Container = styled.footer`
   width: 85vw;
   border-top: 1px solid #cccccc;
   @media (max-width: 768px) {
-    footer {
+    & {
       width: 100%;
     }
+
     .social {
       font-size: 12px;
     }

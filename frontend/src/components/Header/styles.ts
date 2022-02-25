@@ -7,6 +7,11 @@ export const Container = styled.header`
   border-bottom: 1px solid #cccccc;
   font-weight: 600;
   width: 85vw;
+  @media (max-width: 768px) {
+    & {
+      width: 100%;
+    }
+  }
 `;
 
 export const ContainerNav = styled.nav`
