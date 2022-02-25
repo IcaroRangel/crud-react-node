@@ -13,7 +13,7 @@ const Footer = () => {
         <Copyright />
         <p>Projeto de Icaro Cesar R.</p>
       </span>
-      <div>
+      <div className="social">
         Redes sociais:
         <a
           href="https://www.instagram.com/icaro_cesar07/"
