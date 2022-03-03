@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "./styles";
-import Input from "../../components/Input";
+//import Input from "../../components/Input";
 import api from "../../services/api";
 import Button from "../../components/Button";
 
