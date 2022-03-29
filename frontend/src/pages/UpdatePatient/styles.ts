@@ -27,4 +27,11 @@ export const Container = styled.div`
       font-size: 10px;
     }
   }
+  div {
+    margin-bottom: 25px;
+  }
+  span {
+    color: red;
+    font-size: 12px;
+  }
 `;

@@ -1,17 +1,16 @@
 import React from "react";
 import { Container } from "./styles";
-//import Input from "../../components/Input";
 import api from "../../services/api";
 import Button from "../../components/Button";
-
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { PatientsProps } from "../../models/Patient";
 import { yupResolver } from "@hookform/resolvers/yup";
+import Input from "../../components/Input";
 
 const CreatePatient = () => {
-  let schema = yup.object().shape({
+  const schema = yup.object().shape({
     name: yup.string().required("Nome é obrigatório"),
     cpf: yup
       .string()
@@ -47,7 +46,6 @@ const CreatePatient = () => {
 
   const onSubmit = React.useCallback(
     async (data) => {
-      console.log(data);
       await api.post("/users", data);
       navigate("/");
     },
@@ -59,38 +57,42 @@ const CreatePatient = () => {
       <h1>Informe os dados do paciente</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
-          <input
-            {...register("name")}
+          <Input
+            register={register}
             placeholder="Nome"
             type="text"
+            name="name"
             className={errors.name ? "error" : ""}
           />
           {errors.name && <span>{errors.name.message}</span>}
         </div>
         <div>
-          <input
-            {...register("cpf")}
+          <Input
+            register={register}
             placeholder="CPF"
             type="text"
+            name="cpf"
             onKeyPress={onlyNumber}
             className={errors.cpf ? "error" : ""}
           />
           {errors.cpf && <span>{errors.cpf.message}</span>}
         </div>
         <div>
-          <input
-            {...register("email")}
+          <Input
+            register={register}
             placeholder="E-mail"
             type="text"
+            name="email"
             className={errors.email ? "error" : ""}
           />
           {errors.email && <span>{errors.email.message}</span>}
         </div>
         <div>
-          <input
-            {...register("address")}
+          <Input
+            register={register}
             placeholder="Endereço"
             type="text"
+            name="address"
             className={errors.address ? "error" : ""}
           />
           {errors.address && <span>{errors.address.message}</span>}

@@ -12,5 +12,5 @@ export const Container = styled.input`
   justify-content: center;
   padding: 20px;
   outline: 0;
-  margin: 5px 0px 25px 0px;
+  margin: 5px 0px 0px 0px;
 `;

@@ -2,7 +2,6 @@ import React, { FormEvent } from "react";
 
 import { useNavigate, useParams } from "react-router-dom";
 import Button from "../../components/Button";
-import Input from "../../components/Input";
 import { usePatientContext } from "../../context/PatientsContext";
 import api from "../../services/api";
 import { Container } from "./styles";
@@ -12,7 +11,6 @@ const DeletePatient = () => {
   const { cpf, setCpf } = usePatientContext();
   const { email, setEmail } = usePatientContext();
   const { address, setAddress } = usePatientContext();
-
   const { id }: any = useParams();
   const { patients, setPatients } = usePatientContext();
   const navigate = useNavigate();
@@ -42,10 +40,10 @@ const DeletePatient = () => {
       <h1>Deletar Paciente</h1>
 
       <form onSubmit={(e) => removePatient(e, id)}>
-        <Input disabled name="name" placeholder={name} />
-        <Input disabled name="cpf" placeholder={cpf} />
-        <Input disabled name="email" placeholder={email} />
-        <Input disabled name="address" placeholder={address} />
+        <input disabled name="name" placeholder={name} />
+        <input disabled name="cpf" placeholder={cpf} />
+        <input disabled name="email" placeholder={email} />
+        <input disabled name="address" placeholder={address} />
 
         <Button type="submit">Confirmar</Button>
       </form>
